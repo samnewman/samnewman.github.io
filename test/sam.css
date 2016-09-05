@@ -52,7 +52,7 @@ a.title {
 }
 
 .title, .alternatetitle {
-	font-family:"RotisSansSerifW01-Bold";
+	font-family:"Rotis Sans Serif W01";
 }
 
 .navzone,.year,.bio,.description,.columns {
@@ -209,7 +209,8 @@ a.title {
 	padding: none;
 	margin: none;
 	margin-top: 0;
-	width: 65%;
+	width: 50%;
+	margin-bottom: 25%;
 }
 
 .bio {
@@ -296,6 +297,10 @@ a.title {
 
 	.underline {
 	text-decoration: underline;
+	}
+
+	.description {
+		width: 90%;
 	}	
 
 }
