@@ -2,15 +2,6 @@
 $(document).ready(function() {
 
 	$('html').hide().fadeIn(500);
-  
-  //$('.alternatetitle').click(function() {
-
-       	//$(".container,.hide,.alternatetitle").hide();
-        //$(".archivecontainer").show();
-        //$(".navzone").css({"opacity":"1" , "position":"absolute"});
-        //$('.blocker').hide();
-		
-		//});
 
   // show alternate project title and corresponding slideshow, hide everything else
 
