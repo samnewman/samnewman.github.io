@@ -2,15 +2,6 @@
 $(document).ready(function() {
 
 	$('html').hide().fadeIn(500);
-  
-  $('.alternatetitle').click(function() {
-
-       	$(".container,.hide,.alternatetitle").hide();
-        $(".archivecontainer").show();
-        $(".navzone").css({"opacity":"1" , "position":"absolute"});
-        $('.blocker').hide();
-		
-		});
 
   // show alternate project title and corresponding slideshow, hide everything else
 
@@ -18,18 +9,35 @@ $(document).ready(function() {
               var self = $(this);
               $('.alternatetitle,.slideshow,.slide').hide();
               $('.alternatetitle[rel=div' + self.attr('target') +'],.slideshow[rel=div' + self.attr('target') +'],.slide[rel=div' + self.attr('target') +']').show();
-              $('.blocker').show();
-              $(".container").fadeIn(100); 
+                            $(".container").fadeIn(100); 
               $(".archivecontainer").hide();
-              $(".navzone").css("opacity",".15");
+              $(".nav").css("opacity",".15");
               $(".slide").parent().find(self).first();
+              $(".back").show();
+              $(".name").hide();
+              $(".blocker").show();
+
         });
 
-  $('.info').click(function() {
+  $(".back").click(function(){
+        $(".name").show();
+        $(".back").hide();
+        $(".container,.hide,.alternatetitle").hide();
+        $(".archivecontainer").show();
+        $(".nav").css({"opacity":"1" , "position":"absolute"});
+        $('.blocker').hide();
+        $(".bio").hide();
+        $(".info").removeClass("underline");
 
-       	$(".bio").toggle();
-       	$(".archivecontainer").toggle();
-       	$(".info").toggleClass("underline");
+  });
+
+  $('.info').click(function() {
+        $(".name").hide();
+        $(".back").show();
+
+       	$(".bio").show();
+       	$(".archivecontainer").hide();
+       	$(".info").addClass("underline");
 		
 		});
 
@@ -43,12 +51,6 @@ $(document).ready(function() {
         next = $(this).parent().find('.slide').first();
         next.show();
   });
-
-  if ($(window).width() < 736) {
-    $(".title").click(function() {
-      $(".navzone").css("position","absolute");
-    });
-  }
 
 
   var isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
